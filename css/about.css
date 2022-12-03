@@ -1,0 +1,371 @@
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box ;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000033;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+.text{
+    margin: 0 auto 100px;
+    position: relative;
+    border: 2px solid #6c94dd;
+    padding: 3px 27px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    z-index: 1;
+}
+.text::after,
+.text::before{
+  content: "";
+    position: absolute;
+    background-color: #6c94dd;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.text:hover{
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.5s;
+}
+.text::after{
+  right: -50px;
+  z-index: -1;
+}
+.text::before{
+  left: -50px;
+  z-index: -1;
+}
+.text:hover:after{
+  animation: s1 0.5s linear forwards;
+}
+.text:hover:before{
+  animation: s2 0.5s linear forwards;
+}
+.main{
+  color: white;
+  background-color: #000033;
+  padding-bottom: 132px;
+}
+.main .items{
+    display: flex;
+    justify-content: space-around;
+   background-color: #160d3c78;
+}
+.main .items a{
+    padding: 25px;
+    color: white;
+    font-size: 20px;
+    position: relative;
+}   
+@media (max-width:570px){
+  .main .items a{
+    font-size: 15px;
+  }
+}
+.main .items a:hover{
+  background-color: #4e40407d;
+  transition: 0.3s;
+}
+.main .items a::before{
+  content: "";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 0;
+    height: 5px;
+    border-top: #6c94dd solid 4px;
+}
+.main .items a:hover:before{
+  width: 100%;
+  transition: 0.3s;
+}
+.main .face{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 55px;
+}
+.main .face .image{
+  box-shadow: 1px 1px 16px 23px #273e623b;
+    background-color: #273e623b;
+}
+.main .face img{
+    width: 205px;
+    
+}
+.main .face .image h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.main .icon{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+@media (max-width:570px){
+  .main .icon{
+    display: none;
+  }
+}
+.main .icon i{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.main .icon i .s{
+  display: none;
+}
+.main .icon i:hover .s{
+   display: inline;
+    font-size: 15px;
+    padding-left: 15px;
+    color: white;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.main .icon i:hover{
+  position: relative;
+    width: 100%;
+    display: flex;
+    border-radius: 25px;
+    padding: 10px;
+    justify-content: flex-start;
+    transition: 0.3s;
+}
+.main .icon  .fc{
+  background-color: #1877f2;
+}
+.main .icon  .wh{
+  background-color: #20f218;
+}
+.main .icon  .in{
+  background-image: linear-gradient(to bottom , #ff00f7 , #db1a1a , #f3f707);
+}
+.main .icon  .te{
+  background-color: #0332abed;
+}
+.bay{
+  background-color: #000033;
+  padding-bottom: 130px;
+}
+.table {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 45px;
+}
+.table .box {
+  background-color: #160d3c78;
+    color: #6c94dd;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 10px #273e623b;
+    overflow: hidden;
+    transition: transform 0.3s ;
+}
+.table .box:hover{
+  transform: translatey(-15px);
+}
+.table .box img{
+  width: 100%;
+  height: 370px;
+}
+.table .box h3{
+  font-weight: 600;
+    font-size: 22px;
+    direction: rtl;
+    margin: 10px 0px;
+    padding: 0px 15px;
+}
+.table .box h2{
+  font-size: 20px;
+    direction: rtl;
+    padding: 0px 15px;
+    margin: 10px 0px;
+    font-weight: 600;
+}
+.table .box .salma{
+  color: #ffc107;
+}
+.table .box i{
+  padding: 10px 0px 20px 10px; 
+}
+.fa-star-sharp::before{
+  content: "\f005";
+}
+.comp{
+  background-color: #000033;
+  color: white;
+}
+.comp h3{
+  direction: rtl;
+    font-weight: bold;
+    font-size: 22px;
+}
+.comp .ha{
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-color: #0c2142ba;
+    border: 0;
+    border-radius: 5px;
+    direction: rtl;
+    caret-color: #6c94dd;
+    color: #6c94dd;
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 35px;
+}
+.comp .ha:focus{
+  outline: none;
+}
+.comp button{
+  position: relative;
+    margin: 0 auto 35px;
+    display: flex;
+    padding: 10px 100px;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 25px;
+    color: white;
+    background-color: #6c94dd;
+    cursor: pointer;
+    border: 0;
+}
+.comp button:hover{
+  background-color: #6c94dd96;
+}
+.communication{
+  background-color: #191919;
+  color: white;
+}
+.communication .val{
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width:570px){
+  .communication .val{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.communication a{
+  display: block;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 25px;
+    font-size: 20px;
+}
+.communication .add h3{
+  width: 208px;
+  letter-spacing: 1px;
+  line-height: 2;
+  direction: rtl;
+  border-bottom: 1px solid white;
+    padding: 5px 0;
+}
+.communication .add h3::before{
+  font-family: "Font Awesome 5 Free";
+    content: "\f3c5";
+    font-weight: 900;
+    margin-left: 10px;
+    font-size: 30px;
+}
+.communication .make{
+  text-align: center;
+    margin: 0;
+    border-top: 1px solid white;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+.communication  .fc{
+  background-color: #1877f2;
+}
+.communication  .wh{
+  background-color: #20f218;
+}
+.communication  .in{
+  background-image: linear-gradient(to bottom , #ff00f7 , #db1a1a , #f3f707);
+}
+.communication  .te{
+  background-color: #0332abed;
+}
+.communication i{
+  padding-right: 10px;
+}
+@keyframes s1 {
+  50%{
+    right: 0;
+  }
+  100%{
+    width: 80%;
+    height: 101%;
+    right: 0;
+    border-radius: 50px;
+  }
+}
+@keyframes s2 {
+  50%{
+    left: 0;
+  }
+  100%{
+    width: 80%;
+    height: 101%;
+    left: 0;
+    border-radius: 50px;
+  }
+}
